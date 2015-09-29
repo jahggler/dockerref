@@ -23,3 +23,6 @@ Then, in the new **~/.boot2docker/profile** file, change the size
 **boot2docker init**  
 **boot2docker up**
 
+## SSH access to docker
+
+**boot2docker ssh**
