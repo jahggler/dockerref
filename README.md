@@ -9,6 +9,8 @@ Delete all docker containers
 **docker rmi -f $(docker images -q)**  
 Delete all docker images
 
+**docker ps**  
+Show running containers
 
 ## Change the docker virtual machine size
 
@@ -24,5 +26,9 @@ Then, in the new **~/.boot2docker/profile** file, change the size
 **boot2docker up**
 
 ## SSH access to docker
+
+**docker exec -it CONTAINER_ID bash**
+
+## SSH access to boot2docker
 
 **boot2docker ssh**
