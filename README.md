@@ -1,5 +1,11 @@
 # Docker reference
 
+**docker ps**  
+Display all running containers
+
+**docker ps -a**  
+Display all created containers
+
 **boot2docker ip**  
 Display the docker IP address (useful when a pack is built with docker-compose)
 
@@ -32,3 +38,11 @@ Then, in the new **~/.boot2docker/profile** file, change the size
 ## SSH access to boot2docker
 
 **boot2docker ssh**
+
+## An error occurred trying to connect: Get https://xx:xx/v1.20/containers/json: x509: certificate is valid for 127.0.0.1, xx, xxx, not xxxx 
+
+First, try **boot2docker upgrade** because there was a known bug before 1.7.1.
+
+Then, finally, if it doesn't work, disable all certificate checks
+
+**alias docker="docker --tlsverify=false"**
