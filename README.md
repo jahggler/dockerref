@@ -35,6 +35,10 @@ Then, in the new **~/.boot2docker/profile** file, change the size
 
 **docker inspect --format='{{.NetworkSettings.IPAddress}}' CONTAINER_NAME**
 
+## Route to Docker
+
+**sudo route -n add 172.17.0.0/16 `boot2docker ip`**
+
 ## SSH access to docker
 
 **docker exec -it CONTAINER_ID bash**
