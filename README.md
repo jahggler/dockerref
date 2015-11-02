@@ -18,6 +18,15 @@ Delete all docker images
 **docker ps**  
 Show running containers
 
+**docker run --name mycontainer -l com.example.server=server1 myimagename**  
+Run **myimagename** in a container named **mycontainer** and set the label **com.example.server** value to **server1**
+
+**docker ps --format="{{.Image}}" --filter="label=com.example.server=server1"**  
+Get image name based on the label value
+
+**docker ps --format="{{.Names}}" --filter="label=com.example.server=server1"**  
+Get container name based on the label value
+
 ## Change the docker virtual machine size
 
 If you don't have the **~/.boot2docker/profile** file yet,  
