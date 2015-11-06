@@ -1,49 +1,49 @@
 # Docker reference
 
+Display all running containers
 ```
 docker ps
 ```
-Display all running containers
 
+Display all created containers
 ```
 docker ps -a
 ```
-Display all created containers
 
+Display the docker IP address (useful when a pack is built with docker-compose)
 ```
 boot2docker ip
 ```
-Display the docker IP address (useful when a pack is built with docker-compose)
 
+Delete all docker containers
 ```
 docker rm -f $(docker ps -q -a)
 ```
-Delete all docker containers
 
+Delete all docker images
 ```
 docker rmi -f $(docker images -q)
 ```
-Delete all docker images
 
+Show running containers
 ```
 docker ps
 ```
-Show running containers
 
+Run **myimagename** in a container named **mycontainer** and set the label **com.example.server** value to **server1**
 ```
 docker run --name mycontainer -l com.example.server=server1 myimagename
 ```
-Run **myimagename** in a container named **mycontainer** and set the label **com.example.server** value to **server1**
 
+Get image name based on the label value
 ```
 docker ps --format="{{.Image}}" --filter="label=com.example.server=server1"
 ```
-Get image name based on the label value
 
+Get container name based on the label value
 ```
 docker ps --format="{{.Names}}" --filter="label=com.example.server=server1"
 ```
-Get container name based on the label value
 
 ## Change the docker virtual machine size
 
