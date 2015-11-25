@@ -76,6 +76,7 @@ docker inspect --format='{{.NetworkSettings.IPAddress}}' CONTAINER_NAME
 ## Route to Docker
 
 ```
+sudo route -n delete 172.17.0.0/16
 sudo route -n add 172.17.0.0/16 `boot2docker ip`
 ```
 
